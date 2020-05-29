@@ -41,10 +41,9 @@
 	src="<c:url value='/resources/js/vendor/bootstrap.bundle.min.js'/>"></script>
 
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+	src="<c:url value='/resources/js/moment.min.js'/>"></script>
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-
+	src="<c:url value='/resources/js/Chart.min.js'/>"></script>
 
 
 <!-- Project JS Import -->
@@ -52,15 +51,14 @@
 
 
 <!-- Datatables -->
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/v/bs4/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/datatables.min.css" />
-
-<script type="text/javascript"
-	src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-<script type="text/javascript"
-	src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-<script type="text/javascript"
-	src="https://cdn.datatables.net/v/bs4/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/datatables.min.js"></script>
+<link type="text/css" rel="stylesheet"
+	href="<c:url value='/resources/css/vendor/datatables/datatables.min.css'/>">
+<script
+	src="<c:url value='/resources/js/vendor/datatables/pdfmake.min.js'/>"></script>
+<script
+	src="<c:url value='/resources/js/vendor/datatables/vfs_fonts.js'/>"></script>
+<script
+	src="<c:url value='/resources/js/vendor/datatables/datatables.min.js'/>"></script>
 
 <!-- Other -->
 <script
