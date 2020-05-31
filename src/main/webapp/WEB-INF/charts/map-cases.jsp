@@ -63,14 +63,14 @@ var onlyValues2 = series2.map(function(obj) {
 });
 var minValue2 = Math.min.apply(null, onlyValues2), maxValue2 = Math.max.apply(
 		null, onlyValues2);
-var paletteScale2 = d3.scale.linear().domain([ minValue, maxValue ]).range(
+var paletteScale2 = d3.scale.linear().domain([ minValue2, maxValue2 ]).range(
 		[ "#e7f3f8", "#107094" ]); // blue color
 
 series2.forEach(function(item) { //
 	var iso2 = item[0], value2 = item[1];
 	dataset2[iso2] = {
 		numberOfThings : value2,
-		fillColor : paletteScale(value2)
+		fillColor : paletteScale2(value2)
 	};
 });
 
