@@ -31,7 +31,7 @@
 	src="<c:url value='/resources/fonts/fontawesome/js/all.min.js'/>"></script>
 
 <!-- JQuery Import -->
-<script src="<c:url value='/resources/js/vendor/jquery/jquery.js'/>" ></script>
+<script src="<c:url value='/resources/js/vendor/jquery/jquery.js'/>"></script>
 
 <!-- Popper -->
 <script src="<c:url value='/resources/js/popper.min.js'/>"></script>
@@ -40,10 +40,8 @@
 <script
 	src="<c:url value='/resources/js/vendor/bootstrap.bundle.min.js'/>"></script>
 
-<script
-	src="<c:url value='/resources/js/moment.min.js'/>"></script>
-<script
-	src="<c:url value='/resources/js/Chart.min.js'/>"></script>
+<script src="<c:url value='/resources/js/moment.min.js'/>"></script>
+<script src="<c:url value='/resources/js/Chart.min.js'/>"></script>
 
 
 <!-- Project JS Import -->
@@ -61,13 +59,11 @@
 	src="<c:url value='/resources/js/vendor/datatables/datatables.min.js'/>"></script>
 
 <!-- Other -->
+<script src="<c:url value='/resources/js/vendor/popper/popper.min.js'/>"></script>
+<script src="<c:url value='/resources/js/vendor/datamaps/d3.min.js'/>"></script>
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	src="<c:url value='/resources/js/vendor/datamaps/topojson.min.js'/>"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-<script
-	src="http://datamaps.github.io/scripts/0.4.4/datamaps.usa.min.js"></script>
+	src="<c:url value='/resources/js/vendor/datamaps/datamaps.usa.min.js'/>"></script>
+
 </head>
