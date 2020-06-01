@@ -34,25 +34,18 @@ public class APIController {
 					|| d.getState().contentEquals("PR")) {
 
 			} else {
-				if (d.getGrade() == null) {
-					String sUrl = "<a href=\"/state/" + d.getState().toString() + "\">" + d.getState().toString()
-							+ "</a>";
-					dataObjects.add(new StateDataObject(sUrl, d.getPositive(), d.getDeath(), d.getTotal(), "-",
-							d.getLastUpdateEt(),
-							(Math.round((double) d.getPositive() / US.getPopulation(d.getState()) * 100000) / 1.00),
-							(Math.round((double) d.getDeath() / US.getPopulation(d.getState()) * 100000) / 1.00),
-							(Math.round((double) d.getTotalTestResults() / US.getPopulation(d.getState()) * 100000)
-									/ 1.00)));
-				} else {
-					String sUrl = "<a href=\"/state/" + d.getState().toString() + "\">" + d.getState().toString()
-							+ "</a>";
-					dataObjects.add(new StateDataObject(sUrl, d.getPositive(), d.getDeath(), d.getTotal(), d.getGrade(),
-							d.getLastUpdateEt(),
-							(Math.round((double) d.getPositive() / US.getPopulation(d.getState()) * 100000) / 1.00),
-							(Math.round((double) d.getDeath() / US.getPopulation(d.getState()) * 100000) / 1.00),
-							(Math.round((double) d.getTotalTestResults() / US.getPopulation(d.getState()) * 100000)
-									/ 1.00)));
-				}
+				String sUrl = "<a href=\"/state/" + d.getState().toString() + "\">"
+						+ US.getFullName(d.getState().toString()) + "</a>";
+				String grade = "-";
+				if (d.getGrade() != null)
+					grade = d.getGrade();
+
+				dataObjects.add(new StateDataObject(sUrl, d.getPositive(), d.getDeath(), d.getTotal(), grade,
+						d.getLastUpdateEt(),
+						(Math.round((double) d.getPositive() / US.getPopulation(d.getState()) * 100000) / 1.00),
+						(Math.round((double) d.getDeath() / US.getPopulation(d.getState()) * 100000) / 1.00),
+						(Math.round((double) d.getTotalTestResults() / US.getPopulation(d.getState()) * 100000)
+								/ 1.00)));
 			}
 		}
 
