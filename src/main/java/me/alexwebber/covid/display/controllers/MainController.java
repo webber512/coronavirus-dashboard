@@ -86,6 +86,8 @@ public class MainController {
 		model.addAttribute("stateData", totalData.toString());
 		model.addAttribute("perCapData", perCapData.toString());
 
+		sessionHandler.addIncreaseToStatistics(covid, session, dataConversion.getDateLastWeek());
+
 		model.addAttribute("title", "COVID Dashboard - Maps");
 		return "maps";
 	}
