@@ -44,7 +44,9 @@ public class SessionHandler {
 		double deathPercentIncrease = 100.0 / today.getDeath() * (today.getDeath() - lastWeek.getDeath());
 		double testPercentIncrease = 100.0 / today.getTotalTestResults()
 				* (today.getTotalTestResults() - lastWeek.getTotalTestResults());
-
+		/**
+		 * Percents
+		 */
 		session.setAttribute("casePercentage", casePercentIncrease);
 		session.setAttribute("deathPercentage", deathPercentIncrease);
 		session.setAttribute("testPercentage", testPercentIncrease);
