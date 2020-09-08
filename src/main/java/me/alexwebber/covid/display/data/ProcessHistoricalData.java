@@ -56,8 +56,13 @@ public class ProcessHistoricalData {
 		} else if (variable.equalsIgnoreCase("tests")) {
 			if (type.equalsIgnoreCase("daily")) {
 				for (BasicHistoricalData data : usDataObjects) {
-					point.add(
-							new Point(dataConversion.convertDate(data.getDate()), data.getTotalTestResultsIncrease()));
+					if (data.getTotalTestResultsIncrease() < 0) {
+						point.add(new Point(dataConversion.convertDate(data.getDate()), 0));
+					} else {
+						point.add(new Point(dataConversion.convertDate(data.getDate()),
+								data.getTotalTestResultsIncrease()));
+
+					}
 				}
 			}
 		}
@@ -109,8 +114,12 @@ public class ProcessHistoricalData {
 		} else if (variable.equalsIgnoreCase("tests")) {
 			if (type.equalsIgnoreCase("daily")) {
 				for (StateHistoricalData data : usDataObjects) {
-					point.add(new Point(dataConversion.convertDate(Integer.parseInt(data.getDate())),
-							data.getTotalTestResultsIncrease()));
+					if (data.getTotalTestResultsIncrease() > 0) {
+						point.add(new Point(dataConversion.convertDate(Integer.parseInt(data.getDate())),
+								data.getTotalTestResultsIncrease()));
+					} else {
+						point.add(new Point(dataConversion.convertDate(Integer.parseInt(data.getDate())), 0));
+					}
 				}
 			}
 		}

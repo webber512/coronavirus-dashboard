@@ -35,14 +35,22 @@ public class StatePoint {
 	 * @return the numberOfCases
 	 */
 	public Integer getCases() {
-		return cases;
+		if (cases < 0) {
+			return 0;
+		} else {
+			return cases;
+		}
 	}
 
 	/**
 	 * @param numberOfCases the numberOfCases to set
 	 */
 	public void setNumberOfCases(Integer cases) {
-		this.cases = cases;
+		if (cases < 0) {
+			this.cases = 0;
+		} else {
+			this.cases = cases;
+		}
 	}
 
 }

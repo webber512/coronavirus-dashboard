@@ -40,7 +40,11 @@ public class Point {
 	 * @param numberOfCases the numberOfCases to set
 	 */
 	public void setNumberOfCases(Integer numberOfCases) {
-		this.numberOfCases = numberOfCases;
+		if (numberOfCases < 0) {
+			this.numberOfCases = 0;
+		} else {
+			this.numberOfCases = numberOfCases;
+		}
 	}
 
 }
